@@ -1,13 +1,13 @@
 function findDivisors() {
-    const number = document.getElementById('number').value;
-    let allDivisors = [];
+    const number = Number(document.getElementById('number').value);
+    let allDivisors = '1';
 
-    for (let i = 1; i < number; i++) {
+    for (let i = 2; i <= number; i++) {
 
         if (number % i === 0) {
-            allDivisors.push(i);
-            break;
+            allDivisors += ', ' + i;
         }
     }
+
     document.getElementById('allDivisors').innerText = allDivisors;
 }
